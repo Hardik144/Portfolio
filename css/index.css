@@ -3,6 +3,7 @@
   padding: 0;
   box-sizing: border-box;
   font-family: 'Gilroy-Bold';
+  overflow: hidden;
 }
 
 .grid-container {
@@ -195,22 +196,150 @@ video {
 .card_project{
   display: none;
 }
+.card_project h1{
+  color: #2d232e;
+  text-shadow: 5px 2px 6px white;
+}
 .projects_section{
   display: flex;
-  justify-content: center;
+  flex-direction: column;
   width: 800px;
   height: 500px;
+  gap: 20px;
+  margin: 10px;
+  padding-right: 16px;
+  overflow: scroll;
+  scrollbar-color: rgb(198, 191, 191) transparent;
 }
 .projectall{
-
+  padding: 10px;
+  min-height: 230px;
+  min-width: 250px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color: #474448;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.projectall p{
+  font-size: 18px;
+}
+.projectall h1{
+  color: white;
+  text-shadow: 0px 0px 0px transparent;
+}
+a{
+  text-decoration: none;
+  color: wheat;
+}
+a:visited{
+  color: wheat;
 }
 
 .card_education{
   display: none;
 }
+.card_education h1{
+  color: #2d232e;
+  text-shadow: 5px 2px 6px white;
+}
+.education_section{
+  display: flex;
+  flex-direction: column;
+  width: 800px;
+  height: 530px;
+  gap: 10px;
+  margin: 10px;
+  padding-right: 16px;
+  overflow: scroll;
+  scrollbar-color: rgb(198, 191, 191) transparent;
+}
+.educationall{
+  padding: 10px;
+  min-height: 160px;
+  min-width: 250px;
+  border: 2px solid white;
+  border-radius: 20px;
+  background-color: #2d232e;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+.educationall p{
+  font-size: 15px;
+}
+.educationall h1{
+  color: white;
+  text-shadow: 0px 0px 0px transparent;
+}
+
 .card_about{
   display: none;
 }
+.card_about h1{
+  color: #242424;
+  text-shadow: 4px -1px 4px white;
+}
+.about_section{
+  background-color: #BEB7A4;
+  border-radius: 20px;
+  display: flex;
+  flex-direction: column;
+  width: 1000px;
+  height: 500px;
+  /* margin: 10px; */
+  gap: 20px;
+  justify-content: space-around;
+  /* align-items: center; */
+  padding: 20px;
+}
+.skill{
+  display: flex;
+  flex-direction: column;
+  gap: 10px;
+}
+
 .card_contact{
   display: none;
+}
+.card_contact h1{
+  color: #2d232e;
+  text-shadow: 5px 2px 6px white;
+}
+.contact_section{
+  display: flex;
+  width: 500px;
+  /* height: 500px; */
+  margin: 10px;
+  gap: 20px;
+  justify-content: space-evenly;
+  align-items: center;
+}
+.contactall{
+  max-width: fit-content;
+  max-height: fit-content;
+  margin: 10px;
+  text-align: center;
+}
+.circle{
+  background-color: white;
+  border-radius: 50%;
+  border: 4px solid white;
+}
+.contactall p{
+  font-size: 15px;
+}
+.contactall h1{
+  color: white;
+  text-shadow: 0px 0px 0px transparent;
+}
+.contactall img{
+  width: 120px;
+  height: 120px;
+}
+
+strong{
+  color:#2d232e;
+  font-size: 23px;
 }
