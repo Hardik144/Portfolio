@@ -8,12 +8,80 @@
 </head>
 <body>
     <div class="grid-container">
-        <div class="grid-item item1">Projects</div>
-        <div class="grid-item item2">Education</div>
-        <div class="grid-item item3">Hardik Patidar</div>
-        <div class="grid-item item4">About Me</div>
-        <div class="grid-item item5">Contact</div>
-        <div class="grid-item item6">Resume</div>
+        <div class="grid-item item1 ">
+            <div class="project">
+                <div class="glass_effect" onclick="openModalProject()"><h1>Projects</h1></div>
+                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/dbc96044-b839-46d4-b162-7288a281d858/BJ4CxciVKK.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+            </div>
+        </div>
+
+        <div class="grid-item item2 ">
+            <div class="education">
+                <div class="glass_effect" onclick="openModalEducation()"><h1>Education</h1></div>
+            </div>
+            <lord-icon
+                src="assets/wired-lineal-486-school-in-reveal.json"
+                trigger="loop"
+                stroke="bold"
+                state="loop-cycle"
+                speed="1"
+                delay="0"
+                colors="primary:#0f0f0f,secondary:#3a3347"
+                style="width:250px;height:250px">
+            </lord-icon>
+        </div>
+
+        <div class="grid-item item3 ">
+            <div class="typing-container">
+                <h1><span class="typing-text">Hello, I'm Hardik</span><span class="cursor"></span></h1>
+            </div>              
+        </div>
+        
+        <div class="grid-item item4 ">
+            <div class="about">
+                <div class="glass_effect" onclick="openModalAbout()"><h1>About</h1></div>
+                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/21d92bca-8178-49bb-93f3-67fa723baac2/Aeab71mpgT.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+            </div>
+        </div>
+
+        <div class="grid-item item5 ">
+            <div class="contact">
+                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/32eb9c99-31bf-4751-b186-e2bf7e1c2a11/fX33iHH5yq.lottie" background="transparent" speed="1" style="width: 300px; height: 300px" loop autoplay></dotlottie-player>
+                <div class="glass_effect" onclick="openModalContact()"><h1>Contact</h1></div>
+            </div>
+        </div>
+
+        <div class="grid-item item6 ">
+            <div class="resume">
+                <h1 class="glass_effect">Resume</h1>
+                <script src="https://unpkg.com/@dotlottie/player-component@2.7.12/dist/dotlottie-player.mjs" type="module"></script>
+                <dotlottie-player src="https://lottie.host/d633e4a1-f697-4213-8325-5441c2e3b9ff/UFFIOqIcvB.lottie" background="transparent" speed="1" style="width: 100px; height: 100px" loop autoplay></dotlottie-player>
+            </div>
+        </div>
+    </div>
+    <div id="modal" class="modal">
+        <div class="modal-content">
+          <span class="close-btn" onclick="closeModal()">&times;</span>
+          <div class="card_project" id="card_project">
+            <h1>Projects</h1>
+            <div class="projects_section">
+                <div class="projectall"></div>
+                <div class="projectall"></div>
+                <div class="projectall"></div>
+            </div>
+          </div>
+
+          <div class="card_education" id="card_education">e</div>
+
+          <div class="card_about" id="card_about">e</div>
+
+          <div class="card_contact" id="card_contact">e</div>
+        </div>
+    </div>
+    <script src="https://cdn.lordicon.com/lordicon.js"></script>
     <script src="main.js"></script>
 </body>
 </html>
