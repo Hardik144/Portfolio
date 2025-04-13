@@ -8,7 +8,7 @@ Welcome to my **developer portfolio website** – a clean and creative space whe
 
 ## 🔗 Live Demo
 
-👉 [Click here to view the live portfolio](https://your-portfolio-url.com)
+👉 [Click here to view the live portfolio](portfolio-hardikpatidar.netlify.app)
 
 ---
 
