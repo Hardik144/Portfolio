@@ -57,6 +57,7 @@ portfolio/
 │   └── Resume.pdf
 ├── css/
 │   └── index.css
+├── animation.html
 ├── index.html
 ├── main.js
 └── Readme.md
