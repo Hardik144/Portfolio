@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <style>
+    body {
+      background-color: transparent;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      height: 100vh;
+      overflow: hidden;
+    }
+
+    .store-container {
+      width: 220px;
+      height: 130px;
+      display: flex;
+      justify-content: center;
+      align-items: center;
+      animation: float 4s ease-in-out infinite;
+    }
+
+    .store {
+      width: 80%;
+      height: 60%;
+      background-color: #5a5a56;
+      border-radius: 15px;
+      display: flex;
+      align-items: center;
+      padding: 15px;
+      gap: 10px;
+      opacity: 0;
+      transform: scale(0);
+      pointer-events: none;
+    }
+
+    .store.show {
+      animation: popup 0.5s ease-out forwards;
+      pointer-events: auto;
+    }
+
+    .store:hover {
+      transform: scale(1.05);
+      box-shadow: 0 0 15px rgba(201, 169, 110, 0.5);
+    }
+
+    .human {
+      width: 45px;
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+    }
+
+    .head {
+      width: 24px;
+      height: 24px;
+      background-color: #c9a96e;
+      border-radius: 50%;
+    }
+
+    .upper-body {
+      width: 30px;
+      height: 20px;
+      background-color: #c9a96e;
+      border-radius: 12px;
+      margin-top: 4px;
+    }
+
+    .lines {
+      flex: 1;
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      gap: 8px;
+    }
+
+    .line {
+      height: 6px;
+      background-color: #c9a96e;
+      border-radius: 4px;
+      width: 0%;
+    }
+
+    @keyframes popup {
+      0% {
+        transform: scale(0);
+        opacity: 0;
+      }
+      50% {
+        transform: scale(1.1);
+        opacity: 1;
+      }
+      100% {
+        transform: scale(1);
+        opacity: 1;
+      }
+    }
+
+    @keyframes float {
+      0%, 100% {
+        transform: translateY(0);
+      }
+      50% {
+        transform: translateY(-15px);
+      }
+    }
+  </style>
+</head>
+<body>
+  <div class="store-container">
+    <div class="store" id="popupstore">
+      <div class="human">
+        <div class="head"></div>
+        <div class="upper-body"></div>
+      </div>
+      <div class="lines">
+        <div class="line" id="line1"></div>
+        <div class="line" id="line2"></div>
+        <div class="line" id="line3"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const store = document.getElementById('popupstore');
+    const lines = [
+      document.getElementById('line1'),
+      document.getElementById('line2'),
+      document.getElementById('line3')
+    ];
+
+    function animateLines() {
+      lines.forEach((line) => {
+        const randomWidth = Math.floor(Math.random() * 60 + 40); // 40% to 100%
+        line.style.transition = 'none';
+        line.style.width = '0%';
+        void line.offsetWidth;
+        line.style.transition = 'width 1.2s ease-in-out';
+        line.style.width = `${randomWidth}%`;
+      });
+    }
+
+    function showstore() {
+      store.classList.add('show');
+      animateLines();
+
+      setTimeout(() => {
+        store.classList.remove('show');
+        lines.forEach(line => line.style.width = '0%');
+      }, 5000); // visible for 8s
+    }
+
+    function loop() {
+      showstore();
+      setInterval(() => {
+        showstore();
+      }, 6000); // 8s show + 3s delay
+    }
+
+    window.onload = loop;
+  </script>
+</body>
+</html>
