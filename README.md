@@ -31,4 +31,59 @@ Users can download my resume directly with a button:
 <a href="assets/resume.pdf" download target="_blank" rel="noopener noreferrer">
   Download Resume
 </a>
+```
+---
+
+## 💻 Built With
+
+- ✅ HTML5  
+- ✅ CSS3 (Flexbox + Custom Grid Layout)  
+- ✅ JavaScript (Minimal)  
+- 🎨 Custom styling (No frameworks used)
+
+---
+
+## 📁 Project Structure
+
+```bash
+portfolio/
+├── assets/
+│   ├── communication.png
+│   ├── Education.json
+│   ├── favicon.png
+│   ├── github.png
+│   ├── linkedin.png
+│   ├── Portfolio.png
+│   └── Resume.pdf
+├── css/
+│   └── index.css
+├── index.html
+├── main.js
+└── Readme.md
+```
+
+---
+
+## 🚀 Getting Started
+
+To run this project locally:
+
+```bash
+git clone https://github.com/yourusername/portfolio.git
+cd portfolio
+# Open index.html in your browser
+```
+
+---
+
+## 📬 Contact Me
+
+- 📧 Email: patidarhardik81@gmail.com
+- 🌐 Portfolio: your-portfolio-url.com
+- 🐙 GitHub: github.com/Hardik144
+
+---
+
+## 📄 License
+- This project is licensed under the MIT License – free to use and modify.
 
